@@ -9,10 +9,10 @@ public class ReadFile {
         try {
             FileInputStream fileInputStream = new FileInputStream(pathToFile);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
-            String result = "";
+            String result = bufferedReader.readLine();
             String unit = "";
             while((unit = bufferedReader.readLine()) != null) {
-                result += unit;
+                result += "\n" + unit;
             }
             return result;
         } catch (FileNotFoundException e) {
