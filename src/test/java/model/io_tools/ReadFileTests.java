@@ -9,6 +9,13 @@ public class ReadFileTests {
     public void readFromFileTest() {
         String expected = ReadFile.getText("testFile.txt");
         String actual = "Я тестовый текст";
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void manyLinesReadTest() {
+        String expected = ReadFile.getText("manyLines.txt");
+        String actual = "абв\nгде\n ж";
+        assertEquals(actual, expected);
     }
 }
