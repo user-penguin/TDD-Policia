@@ -1,13 +1,16 @@
 package model;
 
+import model.converter.JSONLib;
+
 public class GameKernel {
     private int nextQuestion;
     public GameKernel() {
         nextQuestion = 0;
     }
 
-    // @TODO реализовать метод получения следующего вопроса
     public String getNextQuestion () {
-        return "Сколько белых полосок на жезле инспектора ГИБДД?";
+        String question =  QuestionTools.getQuestion(nextQuestion);
+        nextQuestion++;
+        return question;
     }
 }
