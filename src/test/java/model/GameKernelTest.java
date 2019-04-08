@@ -35,4 +35,13 @@ public class GameKernelTest {
         int actual = 0;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void getQuestionsCountTest () {
+        GameKernel gameKernel = new GameKernel();
+        gameKernel.getNextQuestion();
+        int expected = gameKernel.getCountOfQuestions();
+        int actuals = 3;
+        assertEquals(expected, actuals);
+    }
 }
