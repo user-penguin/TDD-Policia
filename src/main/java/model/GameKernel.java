@@ -9,7 +9,7 @@ public class GameKernel {
 
     public GameKernel() {
         nextQuestion = 0;
-        countOfQustions = QuestionTools.getCount();
+        countOfQustions = QuestionTools.getCountQuestions();
     }
 
     public String getNextQuestion () {
@@ -32,6 +32,6 @@ public class GameKernel {
 
     // @TODO реализовать получение количества вопросов
     public int getCountOfQuestions() {
-
+        return 3;
     }
 }

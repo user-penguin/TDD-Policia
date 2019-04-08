@@ -48,8 +48,9 @@ public class QuestionTools {
         return false;
     }
 
-    // @TODO добавить получение размера
     public static int getCountQuestions() {
-        return 3;
+        JSONObject modules = JSONLib.getJsonFromFile("/json/answers_and_questions.json");
+        JSONArray questions = modules.getJSONArray("modules");
+        return questions.length();
     }
 }
