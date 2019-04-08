@@ -5,6 +5,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class QuestionTools {
+    private static boolean previous = false;
     public static String getTrueAnswer(int i) {
         JSONObject modules = JSONLib.getJsonFromFile("/json/answers_and_questions.json");
         JSONArray questions = modules.getJSONArray("modules");
@@ -31,5 +32,16 @@ public class QuestionTools {
             wrongAnswers[k] = arrayOfWrongAnswers.getString(k);
         }
         return wrongAnswers;
+    }
+
+    // @TODO реализовать метод получения рандомного числа от 1 до 4
+    public static int getRandom() {
+        if (previous) {
+            previous = false;
+            return 2;
+        } else {
+            previous = true;
+            return 1;
+        }
     }
 }

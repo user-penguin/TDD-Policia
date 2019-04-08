@@ -2,8 +2,7 @@ package model;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class QuestionTests {
     @Test
@@ -25,5 +24,22 @@ public class QuestionTests {
         String[] expected = QuestionTools.getFakeAnswers(2);
         String[] actual = new String[]{"генерал-майор", "младший лейтенант", "поручик"};
         assertArrayEquals(actual, expected);
+    }
+
+    @Test
+    public void getRandomPlace () {
+        int expected1 = QuestionTools.getRandom();
+        int expected2 = QuestionTools.getRandom();
+        int expected3 = QuestionTools.getRandom();
+        int expected4 = QuestionTools.getRandom();
+        boolean expected =
+                expected1 == expected2 &&
+                expected1 == expected3 &&
+                expected1 == expected4 &&
+                expected2 == expected3 &&
+                expected2 == expected4 &&
+                expected3 == expected4;
+        assertFalse(expected);
+
     }
 }
