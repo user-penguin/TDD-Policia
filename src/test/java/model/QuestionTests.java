@@ -50,4 +50,11 @@ public class QuestionTests {
         expected = QuestionTools.checkAnswer("2", 0);
         assertTrue(expected);
     }
+
+    @Test
+    public void getCountQuestionsTest() {
+        int expected = QuestionTools.getCountQuestions();
+        int actual = 3;
+        assertEquals(expected, actual);
+    }
 }

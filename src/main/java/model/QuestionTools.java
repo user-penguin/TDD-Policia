@@ -47,4 +47,9 @@ public class QuestionTools {
         }
         return false;
     }
+
+    // @TODO добавить получение размера
+    public static int getCountQuestions() {
+        return 3;
+    }
 }

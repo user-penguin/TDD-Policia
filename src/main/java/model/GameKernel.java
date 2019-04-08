@@ -4,10 +4,12 @@ import model.converter.JSONLib;
 
 public class GameKernel {
     private int nextQuestion;
+    private int countOfQustions;
     private final static int oneCost = 200;
 
     public GameKernel() {
         nextQuestion = 0;
+        countOfQustions = QuestionTools.getCount();
     }
 
     public String getNextQuestion () {
@@ -30,6 +32,6 @@ public class GameKernel {
 
     // @TODO реализовать получение количества вопросов
     public int getCountOfQuestions() {
-        return 3;
+
     }
 }
