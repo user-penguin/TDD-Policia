@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -68,8 +69,20 @@ public class Controller {
     }
 
     private void nextQuestion() {
-        gameKernel.getNextQuestion();
-        update();
+        if (gameKernel.getCountOfQuestions() == gameKernel.getCurrentQuestion() + 1) {
+            answer1.setVisible(false);
+            answer2.setVisible(false);
+            answer3.setVisible(false);
+            answer4.setVisible(false);
+            prizeField.setText(String.valueOf(Integer.parseInt(prizeField.getText()) + 200 * (gameKernel.getCurrentQuestion()+1)));
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Поздравляем");
+            alert.setContentText("Вы выиграли " + prizeField.getText() + " BTC!");
+            alert.showAndWait();
+        } else {
+            gameKernel.getNextQuestion();
+            update();
+        }
     }
 
     @FXML
