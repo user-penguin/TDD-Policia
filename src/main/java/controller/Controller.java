@@ -42,6 +42,7 @@ public class Controller {
         questionField.setText(QuestionTools.getQuestion(gameKernel.getCurrentQuestion()));
         prizeField.setText(String.valueOf(gameKernel.getPrizeSize()));
         Button[] buttons = new Button[] {answer1, answer2, answer3, answer4};
+        setRandomQuestion(buttons);
     }
 
     private void setRandomQuestion(Button[] buttons) {

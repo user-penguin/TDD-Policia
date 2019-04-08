@@ -4,6 +4,8 @@ import model.converter.JSONLib;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.Random;
+
 public class QuestionTools {
     private static boolean previous = false;
     public static String getTrueAnswer(int i) {
@@ -35,13 +37,8 @@ public class QuestionTools {
     }
 
     public static int getRandom() {
-        if (previous) {
-            previous = false;
-            return 2;
-        } else {
-            previous = true;
-            return 1;
-        }
+        Random random = new Random();
+        return random.nextInt(4);
     }
 
     public static boolean checkAnswer(String answer, int i) {
