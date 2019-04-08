@@ -15,4 +15,14 @@ public class GameKernelTest {
         actual = "После какой фразы нужно вызывать сотрудников СОБР?";
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void getPrizeSizeTest () {
+        GameKernel gameKernel = new GameKernel();
+        gameKernel.getNextQuestion();
+        gameKernel.getNextQuestion();
+        int expected = gameKernel.getPrizeSize();
+        int actual = 600;
+        assertEquals(actual, expected);
+    }
 }

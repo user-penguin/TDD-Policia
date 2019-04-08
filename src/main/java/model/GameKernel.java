@@ -13,4 +13,9 @@ public class GameKernel {
         nextQuestion++;
         return question;
     }
+
+    // @TODO реализовать метод подсчёта выигрыша
+    public int getPrizeSize() {
+        return 600;
+    }
 }
