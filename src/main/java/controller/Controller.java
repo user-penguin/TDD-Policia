@@ -3,6 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import model.GameKernel;
 import model.QuestionTools;
 
@@ -44,9 +45,32 @@ public class Controller {
         answer4.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[2]);
     }
 
+    private void checkAnswer(String currentValue) {
+        if (!QuestionTools.checkAnswer(currentValue, gameKernel.getCurrentQuestion())) {
+            Stage stage = (Stage) answer1.getScene().getWindow();
+            stage.close();
+        }
+
+    }
+
     @FXML
     public void sendAnswer1() {
+        checkAnswer(answer1.getText());
+    }
 
+    @FXML
+    public void sendAnswer2() {
+        checkAnswer(answer2.getText());
+    }
+
+    @FXML
+    public void sendAnswer3() {
+        checkAnswer(answer3.getText());
+    }
+
+    @FXML
+    public void sendAnswer4() {
+        checkAnswer(answer4.getText());
     }
 
 }

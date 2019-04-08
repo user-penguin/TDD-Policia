@@ -12,9 +12,9 @@
       <Text layoutX="421.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question" />
       <TextField fx:id="prizeField" layoutX="23.0" layoutY="390.0" />
       <Text layoutX="93.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prize" />
-      <Button fx:id="answer1" layoutX="179.0" layoutY="115.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="answer4" layoutX="502.0" layoutY="151.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="answer3" layoutX="179.0" layoutY="151.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="answer2" layoutX="502.0" layoutY="115.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="answer1" layoutX="179.0" layoutY="115.0" mnemonicParsing="false" onAction="#sendAnswer1" text="Button" />
+      <Button fx:id="answer4" layoutX="502.0" layoutY="151.0" mnemonicParsing="false" onAction="#sendAnswer4" text="Button" />
+      <Button fx:id="answer3" layoutX="179.0" layoutY="151.0" mnemonicParsing="false" onAction="#sendAnswer3" text="Button" />
+      <Button fx:id="answer2" layoutX="502.0" layoutY="115.0" mnemonicParsing="false" onAction="#sendAnswer2" text="Button" />
    </children>
 </AnchorPane>
