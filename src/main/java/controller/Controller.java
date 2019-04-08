@@ -39,6 +39,9 @@ public class Controller {
 
     private void update() {
         answer1.setText(QuestionTools.getTrueAnswer(gameKernel.getCurrentQuestion()));
+        answer2.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[0]);
+        answer3.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[1]);
+        answer4.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[2]);
     }
 
     @FXML
