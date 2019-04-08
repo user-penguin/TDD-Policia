@@ -44,10 +44,10 @@ public class QuestionTools {
         }
     }
 
-    // @TODO реализовать проверку ответа
     public static boolean checkAnswer(String answer, int i) {
-        if (answer.equals("Мыло")) {
-            return false;
-        } else return true;
+        if (getTrueAnswer(i).equals(answer)) {
+            return true;
+        }
+        return false;
     }
 }
