@@ -12,4 +12,9 @@ public class QuestionTools {
         String result = concreteQuestion.getJSONObject(2).get("answer_true").toString();
         return result;
     }
+
+    // @TODO реализовать метод поиска вопроса по ИД
+    public static String getQuestion(int i) {
+        return "Какому званию соответствует погон с одной средней звездой?";
+    }
 }
