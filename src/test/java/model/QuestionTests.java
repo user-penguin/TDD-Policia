@@ -42,4 +42,12 @@ public class QuestionTests {
         assertFalse(expected);
 
     }
+
+    @Test
+    public void checkTrueAnswer () {
+        boolean expected = QuestionTools.checkAnswer("Мыло", 0);
+        assertFalse(expected);
+        expected = QuestionTools.checkAnswer("2", 0);
+        assertTrue(expected);
+    }
 }

@@ -34,7 +34,6 @@ public class QuestionTools {
         return wrongAnswers;
     }
 
-    // @TODO реализовать метод получения рандомного числа от 1 до 4
     public static int getRandom() {
         if (previous) {
             previous = false;
@@ -43,5 +42,12 @@ public class QuestionTools {
             previous = true;
             return 1;
         }
+    }
+
+    // @TODO реализовать проверку ответа
+    public static boolean checkAnswer(String answer, int i) {
+        if (answer.equals("Мыло")) {
+            return false;
+        } else return true;
     }
 }
