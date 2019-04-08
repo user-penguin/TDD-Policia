@@ -26,4 +26,13 @@ public class GameKernelTest {
         int actual = 600;
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void getNumberOfCurrentQuestionTest () {
+        GameKernel gameKernel = new GameKernel();
+        gameKernel.getNextQuestion();
+        int expected = gameKernel.getCurrentQuestion();
+        int actual = 0;
+        assertEquals(expected, actual);
+    }
 }

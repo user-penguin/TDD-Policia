@@ -16,12 +16,16 @@ public class GameKernel {
         return question;
     }
 
-    // @TODO реализовать метод подсчёта выигрыша
     public int getPrizeSize() {
         int cost = 0;
         for (int i = 1; i < nextQuestion; i++) {
             cost += oneCost * i;
         }
         return cost;
+    }
+
+    // @TODO получить номер текущего вопроса
+    public int getCurrentQuestion() {
+        return 0;
     }
 }
