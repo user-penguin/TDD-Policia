@@ -39,6 +39,8 @@ public class Controller {
     }
 
     private void update() {
+        questionField.setText(QuestionTools.getQuestion(gameKernel.getCurrentQuestion()));
+        prizeField.setText(String.valueOf(gameKernel.getPrizeSize()));
         answer1.setText(QuestionTools.getTrueAnswer(gameKernel.getCurrentQuestion()));
         answer2.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[0]);
         answer3.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[1]);
@@ -49,8 +51,14 @@ public class Controller {
         if (!QuestionTools.checkAnswer(currentValue, gameKernel.getCurrentQuestion())) {
             Stage stage = (Stage) answer1.getScene().getWindow();
             stage.close();
+        } else {
+            nextQuestion();
         }
+    }
 
+    private void nextQuestion() {
+        gameKernel.getNextQuestion();
+        update();
     }
 
     @FXML
