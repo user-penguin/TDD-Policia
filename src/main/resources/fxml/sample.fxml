@@ -8,9 +8,13 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <TextField fx:id="questionField" layoutX="85.0" layoutY="62.0" prefHeight="29.0" prefWidth="731.0" />
-      <Button layoutX="395.0" layoutY="121.0" mnemonicParsing="false" onAction="#getNextQuestion" text="Next Question" />
+      <Button fx:id="startButton" layoutX="23.0" layoutY="64.0" mnemonicParsing="false" onAction="#startGame" text="Start" />
       <Text layoutX="421.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question" />
-      <TextField fx:id="prizeField" layoutX="85.0" layoutY="219.0" />
-      <Text layoutX="155.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prize" />
+      <TextField fx:id="prizeField" layoutX="23.0" layoutY="390.0" />
+      <Text layoutX="93.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prize" />
+      <Button fx:id="answer1" layoutX="179.0" layoutY="115.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="answer4" layoutX="502.0" layoutY="151.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="answer3" layoutX="179.0" layoutY="151.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="answer2" layoutX="502.0" layoutY="115.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>
