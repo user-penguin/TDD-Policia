@@ -63,6 +63,10 @@ public class Controller {
     private void checkAnswer(String currentValue) {
         if (!QuestionTools.checkAnswer(currentValue, gameKernel.getCurrentQuestion())) {
             Stage stage = (Stage) answer1.getScene().getWindow();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Блин блинский");
+            alert.setContentText("Проигрыш, пока");
+            alert.showAndWait();
             stage.close();
         } else {
             nextQuestion();
