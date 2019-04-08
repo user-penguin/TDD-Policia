@@ -30,8 +30,7 @@ public class GameKernel {
         return nextQuestion - 1;
     }
 
-    // @TODO реализовать получение количества вопросов
     public int getCountOfQuestions() {
-        return 3;
+        return countOfQustions;
     }
 }
