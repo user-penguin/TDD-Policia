@@ -5,15 +5,18 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="900.0" layoutX="1.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../khsm.png" />
          </image>
       </ImageView>
+      <Pane layoutX="14.0" layoutY="28.0" prefHeight="171.0" prefWidth="871.0" style="-fx-background-color: white; -fx-opacity: 0.5;" />
+      <Pane layoutX="14.0" layoutY="352.0" prefHeight="171.0" prefWidth="192.0" style="-fx-background-color: white; -fx-opacity: 0.5;" />
       <TextField fx:id="questionField" layoutX="85.0" layoutY="62.0" prefHeight="29.0" prefWidth="731.0" />
       <Button fx:id="startButton" layoutX="23.0" layoutY="64.0" mnemonicParsing="false" onAction="#startGame" text="Start" />
       <Text layoutX="421.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question" />
