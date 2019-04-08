@@ -46,7 +46,15 @@ public class Controller {
     }
 
     private void setRandomQuestion(Button[] buttons) {
-
+        int random = QuestionTools.getRandom();
+        int index = 0;
+        buttons[random].setText(QuestionTools.getTrueAnswer(gameKernel.getCurrentQuestion()));
+        for (int i = 0; i < buttons.length; i++) {
+            if (i != random) {
+                buttons[i].setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[index]);
+                index++;
+            }
+        }
     }
 
 
