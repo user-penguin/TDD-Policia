@@ -14,7 +14,7 @@ public class Controller {
     private TextField questionField, prizeField;
 
     @FXML
-    private Button startButton, answer1, answer2, answer3, answer4;
+    private Button startButton, answer1, answer2, answer3, answer4, helpButton;
 
     private GameKernel gameKernel;
 
@@ -51,6 +51,7 @@ public class Controller {
         int index = 0;
         buttons[random].setText(QuestionTools.getTrueAnswer(gameKernel.getCurrentQuestion()));
         for (int i = 0; i < buttons.length; i++) {
+            buttons[i].setVisible(true);
             if (i != random) {
                 buttons[i].setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[index]);
                 index++;
@@ -83,6 +84,17 @@ public class Controller {
             gameKernel.getNextQuestion();
             update();
         }
+    }
+
+    @FXML
+    public void get75on25Help() {
+        Button[] buttons = new Button[] {answer1, answer2, answer3, answer4};
+        for (Button button: buttons) {
+            if (!QuestionTools.checkAnswer(button.getText(), gameKernel.getCurrentQuestion())) {
+                button.setVisible(false);
+            }
+        }
+        helpButton.setVisible(false);
     }
 
     @FXML
