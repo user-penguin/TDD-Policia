@@ -24,8 +24,7 @@ public class GameKernel {
         return cost;
     }
 
-    // @TODO получить номер текущего вопроса
     public int getCurrentQuestion() {
-        return 0;
+        return nextQuestion - 1;
     }
 }
