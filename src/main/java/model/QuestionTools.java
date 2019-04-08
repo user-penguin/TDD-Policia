@@ -13,8 +13,11 @@ public class QuestionTools {
         return result;
     }
 
-    // @TODO реализовать метод поиска вопроса по ИД
     public static String getQuestion(int i) {
-        return "Какому званию соответствует погон с одной средней звездой?";
+        JSONObject modules = JSONLib.getJsonFromFile("/json/answers_and_questions.json");
+        JSONArray questions = modules.getJSONArray("modules");
+        JSONArray concreteQuestion = questions.getJSONArray(i);
+        String result = concreteQuestion.getJSONObject(0).get("question").toString();
+        return result;
     }
 }
