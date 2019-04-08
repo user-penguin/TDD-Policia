@@ -8,14 +8,14 @@ import static org.junit.Assert.assertEquals;
 public class JSONLibTest {
     @Test
     public void fileToJson () {
-        JSONObject expected = JSONLib.getJsonFromFile("test.json");
+        JSONObject expected = JSONLib.getJsonFromFile("/json/test.json");
         JSONObject actual = new JSONObject("{\"kek\": 1}");
         assertEquals(actual.toString(), expected.toString());
     }
 
     @Test
     public void fileToJsonArrayTest () {
-        JSONObject expected = JSONLib.getJsonFromFile("arrayTest.json");
+        JSONObject expected = JSONLib.getJsonFromFile("/json/arrayTest.json");
         JSONObject actual = new JSONObject("{\n" +
                 " \"kek\":\n" +
                 "      [\n" +

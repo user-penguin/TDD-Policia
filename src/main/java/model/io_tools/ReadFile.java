@@ -5,7 +5,7 @@ import java.io.*;
 public class ReadFile {
     // @TODO реализовать получение текста из файла
     public static String getText (String path) {
-        String pathToFile = ReadFile.class.getResource("/text/" + path).getPath();
+        String pathToFile = ReadFile.class.getResource(path).getPath();
         try {
             FileInputStream fileInputStream = new FileInputStream(pathToFile);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
