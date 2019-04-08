@@ -9,11 +9,6 @@ import javafx.stage.Stage;
 public class Main extends Application {
     private static Stage mainStage;
 
-    // @TODO реализовать получение ширины окна
-    public static double getWindowWidth() {
-        return 900;
-    }
-
     public void setMainStage(Stage stage) {
         mainStage = stage;
     }
