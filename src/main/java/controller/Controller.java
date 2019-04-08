@@ -41,11 +41,13 @@ public class Controller {
     private void update() {
         questionField.setText(QuestionTools.getQuestion(gameKernel.getCurrentQuestion()));
         prizeField.setText(String.valueOf(gameKernel.getPrizeSize()));
-        answer1.setText(QuestionTools.getTrueAnswer(gameKernel.getCurrentQuestion()));
-        answer2.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[0]);
-        answer3.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[1]);
-        answer4.setText(QuestionTools.getFakeAnswers(gameKernel.getCurrentQuestion())[2]);
+        Button[] buttons = new Button[] {answer1, answer2, answer3, answer4};
     }
+
+    private void setRandomQuestion(Button[] buttons) {
+
+    }
+
 
     private void checkAnswer(String currentValue) {
         if (!QuestionTools.checkAnswer(currentValue, gameKernel.getCurrentQuestion())) {
