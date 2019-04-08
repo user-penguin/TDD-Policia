@@ -4,6 +4,8 @@ import model.converter.JSONLib;
 
 public class GameKernel {
     private int nextQuestion;
+    private final static int oneCost = 200;
+
     public GameKernel() {
         nextQuestion = 0;
     }
@@ -16,6 +18,10 @@ public class GameKernel {
 
     // @TODO реализовать метод подсчёта выигрыша
     public int getPrizeSize() {
-        return 600;
+        int cost = 0;
+        for (int i = 1; i < nextQuestion; i++) {
+            cost += oneCost * i;
+        }
+        return cost;
     }
 }

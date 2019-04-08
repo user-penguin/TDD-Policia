@@ -21,6 +21,7 @@ public class GameKernelTest {
         GameKernel gameKernel = new GameKernel();
         gameKernel.getNextQuestion();
         gameKernel.getNextQuestion();
+        gameKernel.getNextQuestion();
         int expected = gameKernel.getPrizeSize();
         int actual = 600;
         assertEquals(actual, expected);
