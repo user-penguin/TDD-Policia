@@ -20,4 +20,9 @@ public class QuestionTools {
         String result = concreteQuestion.getJSONObject(0).get("question").toString();
         return result;
     }
+
+    // @TODO получение неправильных ответов для викторины по ИД
+    public static String[] getFakeAnswers(int i) {
+        return new String[]{"генерал-майор", "младший лейтенант", "поручик"};
+    }
 }
