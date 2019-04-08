@@ -21,8 +21,15 @@ public class QuestionTools {
         return result;
     }
 
-    // @TODO получение неправильных ответов для викторины по ИД
     public static String[] getFakeAnswers(int i) {
-        return new String[]{"генерал-майор", "младший лейтенант", "поручик"};
+        JSONObject modules = JSONLib.getJsonFromFile("/json/answers_and_questions.json");
+        JSONArray questions = modules.getJSONArray("modules");
+        JSONArray concreteQuestion = questions.getJSONArray(i);
+        JSONArray arrayOfWrongAnswers = concreteQuestion.getJSONObject(1).getJSONArray("answer_wrong");
+        String[] wrongAnswers = new String[3];
+        for (int k = 0; k < arrayOfWrongAnswers.length(); k++) {
+            wrongAnswers[k] = arrayOfWrongAnswers.getString(k);
+        }
+        return wrongAnswers;
     }
 }
